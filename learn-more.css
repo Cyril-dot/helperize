@@ -1,0 +1,557 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.header {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 10px 0;
+    margin-bottom: 0%;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px; /* Adjust size of logo */
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .business-name h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .navbar .nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: white;
+    color: black;
+  }
+  
+  .navbar .btn-primary {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar .btn-primary:hover {
+    background-color: black;
+    color: white;
+  }
+
+/* Intro Section */
+.intro-section {
+    background-color: #fff;
+    color: #000;
+    padding: 60px 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid #ccc;
+    align-items: left;
+}
+
+.intro-section h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    margin-left: auto;
+}
+
+/* Feature Cards Layout */
+/* General Styling for the Intro Section */
+.intro-section {
+    padding: 40px 10px; /* Reduced padding on left and right */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.intro-content {
+    max-width: 1650px;
+    margin: 0 auto; /* Center the content */
+    text-align: center;
+}
+
+/* Intro Heading and Paragraph */
+.intro-content h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Feature Cards Container */
+.intro-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 15px; /* Reduced gap between cards */
+    margin-bottom: 40px;
+}
+
+/* Individual Feature Card Styling */
+.feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 15px); /* Adjusted width to reduce gap */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Image inside Feature Card */
+.feature-card img {
+    width: 450px; /* Set the width */
+    height: 350px; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the image */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for both transform and shadow */
+}
+
+.feature-card img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Call to Action Section */
+.cta-wrapper {
+    background-color: white;
+    color: black;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+.cta-wrapper p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cta-wrapper .cta-button {
+    background-color: black;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-wrapper .cta-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cta-wrapper p {
+        font-size: 18px;
+    }
+
+    .cta-wrapper .cta-button {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cta-wrapper p {
+        font-size: 16px;
+    }
+
+    .cta-wrapper .cta-button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+/* Hover effect for feature cards */
+.feature-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Hover effect for image */
+.feature-card img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Feature Card Heading */
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Feature Card Paragraph */
+.feature-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cta-section .btn-primary {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-features {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center the cards */
+    }
+
+    .feature-card {
+        width: 100%; /* Full width for each card on mobile */
+    }
+
+    .cta-section {
+        margin-top: 30px;
+    }
+}
+
+
+
+/* Call-to-Action Section */
+.cta-section {
+    margin-top: 40px;
+}
+
+.cta-section p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cta-section .btn-primary {
+    background-color: black;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .intro-features {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-section h2 {
+        font-size: 28px;
+    }
+
+    .intro-section p {
+        font-size: 16px;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}
+
+
+/* Features Section */
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: gray;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features-section {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
+/* Features Section */
+.features-container {
+    background-color: white;
+    color: black;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.features-container h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.feature-item h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+}
+
+/* Feature Info (Initially Hidden) */
+.feature-details {
+    display: none;
+    font-size: 16px;
+    color: black;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.feature-item:hover .feature-details {
+    display: block;
+    color: #333;
+}
+
+/* More Info Section */
+.why-choose-us {
+    background-color: white;
+    color: black;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid black;
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.why-choose-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .features-container h2 {
+        font-size: 30px;
+    }
+
+    .feature-item {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .feature-item h3 {
+        font-size: 24px;
+    }
+
+    .feature-item p {
+        font-size: 16px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 28px;
+    }
+
+    .why-choose-us p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features-container h2 {
+        font-size: 24px;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .feature-item h3 {
+        font-size: 22px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 24px;
+    }
+
+    .why-choose-us p {
+        font-size: 14px;
+    }
+}

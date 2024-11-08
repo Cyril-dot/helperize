@@ -1,0 +1,566 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+  .header {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 10px 0;
+    margin-bottom: 100px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px; /* Adjust size of logo */
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .business-name h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .navbar .nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: white;
+    color: black;
+  }
+  
+  .navbar .btn-primary {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar .btn-primary:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Hero Section */
+ /* About Section */
+.about-main-content {
+    padding: 50px 20px;
+    background-color: white; /* White background */
+    color: black; /* Black text for contrast */
+  }
+  
+  .about-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    margin-right: 30px;
+    margin-left: 50px;
+  }
+  
+  .hero-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: black; /* Black text for heading */
+    font-weight: 700;
+  }
+  
+  .hero-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black; /* Black text for paragraph */
+    line-height: 1.6;
+  }
+  
+  .hero-image {
+    width: 40%;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .hero-image {
+      width: 60%; /* Image takes up more space on mobile */
+      margin-top: 20px;
+    }
+  }
+  
+  /* About Section */
+  /* About Section */
+.about-section {
+    padding: 60px 20px; /* Padding for spacing */
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    text-align: center; /* Center align text */
+    max-width: 1600px;
+    margin: 0 auto; /* Center the section */
+    border-radius: 8px; /* Optional rounded corners for a clean, modern look */
+  }
+  
+  /* Heading Style */
+  .about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px; /* Large font size for the heading */
+    font-weight: 300px;
+    color: black; /* Black text for the heading */
+    margin-bottom: 20px; /* Space between heading and text */
+  }
+  
+  /* Paragraph Style */
+  .about-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    color: rgb(59, 56, 56); /* Black text for paragraph */
+    line-height: 1.6; /* Add some line-height for readability */
+    margin-top: 0;
+    margin-bottom: 20px; /* Space between text and any following elements */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .about-section h2 {
+      font-size: 2rem; /* Smaller font for headings on mobile */
+    }
+  
+    .about-section p {
+      font-size: 1rem; /* Slightly smaller text for mobile screens */
+    }
+  }
+  
+  
+ /* Skills Section */
+.skills-section {
+    padding: 60px 20px; /* Padding for spacing */
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    text-align: center; /* Center text */
+  }
+  
+  .skills-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem; /* Large font size for the heading */
+    font-weight: 700;
+    color: black; /* Black heading */
+    margin-bottom: 40px; /* Spacing between heading and cards */
+  }
+  
+  /* Skills Container */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: space-between; /* Distribute cards evenly across the section */
+    gap: 30px; /* Space between cards */
+    width: 100%; /* Ensure the container spans the full width of the section */
+  }
+  
+  /* Individual Skill Cards */
+  .skill-card {
+    background-color: #f9f9f9; /* Light grey background for the card */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    width: 30%; /* Set a fixed width for the cards */
+    box-sizing: border-box; /* Include padding in width */
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Remove box-shadow */
+  .skill-card {
+    box-shadow: none; /* No box shadow */
+  }
+  
+  .skill-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px; /* Slightly larger font for the subheadings */
+    font-weight: 600;
+    color: black; /* Black text for skill title */
+    margin-bottom: 10px;
+  }
+  
+  .skill-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; /* Standard text size */
+    color: black; /* Black text */
+    line-height: 1.6; /* Add some line height for readability */
+  }
+  
+  /* Hover Effect on Skill Cards */
+  .skill-card:hover {
+    transform: translateY(-10px); /* Slightly raise the card on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skills-container {
+      flex-direction: column; /* Stack the cards vertically on smaller screens */
+      align-items: center; /* Center align the cards */
+    }
+  
+    .skill-card {
+      width: 90%; /* Let the cards take up 90% of the screen width */
+      margin-bottom: 20px; /* Add space between stacked cards */
+    }
+  }
+  
+  
+  /* Work Experience Section */
+.experience-section {
+    padding: 60px 20px; /* Padding for spacing */
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    text-align: center; /* Center the section */
+  }
+  
+  .experience-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem; /* Large font size */
+    font-weight: 700;
+    color: black; /* Black text for the title */
+    margin-bottom: 40px; /* Space between the heading and the list */
+  }
+  
+  /* Experience List */
+  .experience-list {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .experience-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center align the items horizontally */
+    background-color: #ffffff; /* Light grey background for each item */
+    margin-bottom: 30px; /* Space between each experience */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-item:hover {
+    transform: translateY(-10px); /* Slightly raise the card on hover */
+  }
+  
+  /* Icon styling */
+  .experience-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black; /* Black background for the icon container */
+    color: white; /* White color for the icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Space between icon and text */
+  }
+  
+  .experience-icon i {
+    font-size: 2rem; /* Icon size */
+  }
+  
+  /* Experience details */
+  .experience-details {
+    max-width: 800px; /* Limit the width of the text content */
+    text-align: left; /* Align text to the left for better readability */
+  }
+  
+  .experience-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* Slightly larger font for job titles */
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px; /* Space below the job title */
+  }
+  
+  .experience-details p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.8; /* Add line-height for better readability */
+    margin-bottom: 10px; /* Add space between paragraphs */
+  }
+  
+  .experience-details strong {
+    font-weight: 600; /* Make the "Duration" text bold */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .experience-item {
+      flex-direction: column; /* Stack the icon and content vertically on smaller screens */
+      align-items: center; /* Center align all items */
+      padding: 20px;
+    }
+  
+    .experience-icon {
+      margin-bottom: 20px; /* Add margin below the icon when stacked */
+    }
+  
+    .experience-details {
+      text-align: center; /* Center-align the text for smaller screens */
+    }
+  }
+  
+  
+/* Contact Section */
+.contact-section {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    text-align: center; /* Centered text */
+    padding: 60px 20px; /* Padding for spacing */
+    border-top: 3px solid black; /* Black top border to define the section */
+  }
+  
+  .contact-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem; /* Large font for the heading */
+    font-weight: 700;
+    color: black; /* Black text for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .contact-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8; /* Spacing between lines for readability */
+    color: black;
+    margin-bottom: 30px; /* Space between paragraph and button */
+    max-width: 800px; /* Limit the width of the paragraph */
+    margin-left: auto;
+    margin-right: auto; /* Center the paragraph */
+  }
+  
+  .contact-section .btn {
+    background-color: black; /* Black background for the button */
+    color: white; /* White text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block for proper button layout */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-section .btn:hover {
+    background-color: white; /* Change background to white on hover */
+    color: black; /* Change text color to black */
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section h2 {
+      font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+  
+    .contact-section p {
+      font-size: 1.1rem; /* Adjust paragraph font size */
+    }
+  
+    .contact-section .btn {
+      font-size: 1.1rem; /* Adjust button font size */
+      padding: 12px 25px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  
+ /* Footer Styles */
+footer {
+    background-color: #000; /* Black background for the footer */
+    color: white; /* White text */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    padding: 50px 20px; /* Increased padding for more space around footer */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    max-width: 1500px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding to prevent content from touching edges */
+  }
+  
+  /* Footer Content Layout */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 290px; /* Increased gap between columns */
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    margin-bottom: 60px; /* Increased space between footer content and the footer quote */
+  }
+  
+  /* Footer Sections (Quick Links, Fun Facts) */
+  .footer-section {
+    flex: 1; /* Each section takes up equal width */
+    max-width: 580px; /* Minimum width to avoid too narrow columns */
+    margin-bottom: 20px; /* Increased space below each section */
+  }
+  
+  .footer-section h3 {
+    font-size: 1.8rem; /* Larger, bolder section titles */
+    text-transform: uppercase;
+    margin-bottom: 30px; /* Increased space below section title */
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6), 0px 0px 30px rgba(255, 255, 255, 0.3); /* 3D effect */
+  }
+  
+  /* Footer Section Links */
+  .footer-section a {
+    display: block;
+    font-size: 1.3rem; /* Larger link font size */
+    color: #ddd; /* Light gray for links */
+    text-decoration: none;
+    margin-bottom: 18px; /* Increased space between links */
+    text-transform: uppercase;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer-section a:hover {
+    color: #ffcc00; /* Hover color for links */
+    transform: translateX(10px); /* Slide effect on hover */
+  }
+  
+  /* Fun Facts Section */
+  .footer-section .fun-facts {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 25px; /* More space between fun facts and section title */
+  }
+  
+  .footer-section .fun-facts p {
+    margin-bottom: 25px; /* Increased space between fun facts */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-section .fun-facts p:hover {
+    transform: translateY(-5px);
+    color: #ffcc00; /* Hover color for facts */
+  }
+  
+  /* Motivational Quote Section */
+  .footer-quote {
+    margin-top: 60px; /* Increased margin top to separate from footer content */
+    padding: 40px 30px; /* Increased padding for better spacing */
+    background-color: #333; /* Dark background for quote box */
+    border-radius: 10px;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .footer-quote .quote {
+    font-size: 1.8rem; /* Larger font for the quote */
+    font-weight: 400; /* Regular weight for the quote */
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), 
+                 0px 0px 30px rgba(255, 255, 255, 0.4); /* Enhanced 3D shadow */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-quote .quote:hover {
+    transform: translateY(-5px); /* Slight lift effect for the quote */
+    color: #ffcc00; /* Change quote color to gold on hover */
+  }
+  
+  /* Footer Copyright */
+  .footer-copy {
+    font-size: 1.1rem;
+    margin-top: 50px; /* Increased space between the copyright and the content */
+    color: #ddd; /* Light gray for the copyright text */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  
+  /* Responsive Layout for Mobile */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack content vertically on small screens */
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 50px; /* More space between sections on mobile */
+    }
+  
+    .footer-section a {
+      font-size: 1.5rem; /* Increase link size on smaller screens */
+    }
+  
+    .footer-quote .quote {
+      font-size: 1.5rem; /* Adjust quote font size for mobile */
+    }
+  
+    .footer-copy {
+      font-size: 1.2rem; /* Slightly increase the font size on mobile */
+    }
+  }
+  

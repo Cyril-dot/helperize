@@ -1,0 +1,524 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 10px 0;
+    margin-bottom: 100px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px; /* Adjust size of logo */
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .business-name h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .navbar .nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: white;
+    color: black;
+  }
+  
+  .navbar .btn-primary {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navbar .btn-primary:hover {
+    background-color: black;
+    color: white;
+  }
+  
+/* Hero Section */
+.services-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* White background for the section */
+    color: black; /* Black text for readability */
+    padding: 50px 20px; /* Padding for spacing */
+    min-height: 400px; /* Minimum height for the hero section */
+  }
+  
+  .hero-text {
+    max-width: 50%; /* Hero text takes up 50% of the section */
+    font-family: 'Arial', sans-serif; /* Choose a clean, sans-serif font */
+  }
+  
+  .hero-text h2 {
+    font-size: 50px; /* Larger font size for the heading */
+    font-weight: bold;
+    letter-spacing: 1px; /* Slight letter spacing for readability */
+    text-transform: uppercase; /* All caps for a professional look */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+  }
+  
+  .hero-text p {
+    font-size: 20px; /* Larger font size for the paragraph */
+    line-height: 1.6; /* Increase line height for readability */
+    font-weight: 300; /* Lighter weight for the paragraph text */
+    max-width: 90%; /* Ensure paragraph doesn't stretch too wide */
+  }
+  
+  .hero-image {
+    max-width: 45%; /* Image takes up 45% of the section */
+    height: auto; /* Maintain aspect ratio of image */
+    border-radius: 10px; /* Slight rounding on the image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 10px;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .hero-image {
+      max-width: 80%;
+      margin-top: 20px;
+    }
+  
+    .hero-text h2 {
+      font-size: 35px; /* Slightly smaller on mobile */
+    }
+  
+    .hero-text p {
+      font-size: 18px; /* Adjust paragraph size on mobile */
+    }
+  }
+  /* Services Overview Section */
+.services-overview {
+    background-color: white; /* White background for the section */
+    color: black; /* Black text */
+    padding: 80px 20px; /* Add padding to give space */
+    text-align: center; /* Center text inside the section */
+  }
+  
+  .services-overview h2 {
+    font-size: 36px; /* Large font for the heading */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Space between heading and content */
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  }
+  
+  .service-card {
+    background-color: white; /* White background for each card */
+    border: 1px solid #e0e0e0; /* Light border around the cards */
+    padding: 30px;
+    width: 30%; /* Each card takes up 30% of the width on larger screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+  }
+  
+  .service-icon {
+    width: 60px; /* Icon size */
+    height: 60px;
+    margin-bottom: 20px; /* Space between icon and heading */
+  }
+  
+  .service-card h3 {
+    font-size: 24px; /* Font size for subheadings */
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between title and description */
+  }
+  
+  .service-card p {
+    font-size: 16px; /* Description font size */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Space before button */
+  }
+  
+  .btn {
+    background-color: black; /* Black background for the button */
+    color: white; /* White text for the button */
+    padding: 12px 25px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover effect */
+  }
+  
+  .btn:hover {
+    background-color: white; /* Button changes to white on hover */
+    color: black; /* Text changes to black */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-card {
+      width: 100%; /* Cards take up full width on smaller screens */
+      margin-bottom: 30px; /* Add space between cards */
+    }
+  
+    .services-overview h2 {
+      font-size: 28px; /* Smaller heading on mobile */
+    }
+  
+    .service-card h3 {
+      font-size: 20px; /* Smaller subheading */
+    }
+  
+    .service-card p {
+      font-size: 14px; /* Adjust paragraph font size */
+    }
+  
+    .btn {
+      padding: 10px 20px; /* Adjust button size */
+    }
+  }
+/* Video Section */
+.services-video {
+    background-color: white; /* White background */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .services-video h2 {
+    color: black; /* Black text for the title */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 video */
+    background-color: black; /* Black background for video container */
+  }
+  
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the container */
+  }
+  
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: white; /* White background for the section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px; /* Add padding for spacing */
+  }
+  
+  .why-choose-text {
+    flex: 1;
+    max-width: 700px; /* Limit the text width */
+  }
+  
+  .why-choose-text h2 {
+    font-size: 2.5rem; /* Larger font size for the title */
+    color: black; /* Black text color */
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-text p {
+    font-size: 1.2rem; /* Medium font size for the paragraph */
+    color: #333; /* Dark gray text for better readability */
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space between the text and button */
+  }
+  
+  .why-choose-text .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .why-choose-text .btn:hover {
+    background-color: #444; /* Slightly darker on hover */
+  }
+  
+  /* Image Styling */
+  .why-choose-image {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    object-fit: cover;
+    margin-left: 40px; /* Space between text and image */
+  }
+
+/* Get in Touch Section */
+.get-in-touch {
+    background-color: white;  /* White background */
+    color: black;             /* Black text color */
+    padding: 60px 20px;       /* Padding for spacing around the content */
+    text-align: center;       /* Center text */
+    border-radius: 8px;       /* Optional rounded corners for the section */
+  }
+  
+  .get-in-touch h2 {
+    font-size: 2.5rem;        /* Larger font size for the heading */
+    color: black;             /* Black color for the heading */
+    font-weight: 600;         /* Make the heading bold */
+    margin-bottom: 20px;      /* Space between heading and paragraph */
+  }
+  
+  .get-in-touch p {
+    font-size: 1.2rem;        /* Medium font size for the paragraph */
+    color: #333;              /* Dark gray color for the paragraph text */
+    line-height: 1.6;         /* Line height for readability */
+    margin-bottom: 30px;      /* Space between the paragraph and the button */
+  }
+  
+  .get-in-touch .btn {
+    display: inline-block;
+    padding: 15px 30px;       /* Generous padding for the button */
+    background-color: black;  /* Black background for the button */
+    color: white;             /* White text color */
+    text-decoration: none;    /* Remove underline from the link */
+    border-radius: 25px;       /* Rounded corners for the button */
+    font-size: 1.2rem;        /* Font size for the button */
+    font-weight: 500;         /* Make the button text slightly bold */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .get-in-touch .btn:hover {
+    background-color: #444;   /* Darker background on hover */
+    text-decoration: none;    /* Remove any underline during hover */
+  }
+  
+  /* Responsive Design: Mobile View */
+  @media (max-width: 768px) {
+    .get-in-touch {
+      padding: 40px 15px;      /* Reduce padding on smaller screens */
+    }
+  
+    .get-in-touch h2 {
+      font-size: 2rem;         /* Adjust heading size for smaller screens */
+    }
+  
+    .get-in-touch p {
+      font-size: 1.1rem;       /* Adjust paragraph size for mobile */
+    }
+  
+    .get-in-touch .btn {
+      padding: 12px 25px;      /* Adjust button padding for smaller screens */
+      font-size: 1.1rem;       /* Adjust font size for mobile */
+    }
+  }
+  
+
+
+  
+/* Footer Styling */
+footer {
+    background-color: black;  /* Black background for the footer */
+    color: white;             /* White text color */
+    padding: 80px 20px;       /* Increased padding for more space */
+    text-align: center;       /* Center the text for balance */
+    font-family: 'Roboto', sans-serif; /* Clean font family */
+    display: flex;
+    flex-direction: column;   /* Stack content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    height: auto;             /* Allow the footer to grow with content */
+  }
+  
+  /* Footer Container */
+  .footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribute content across the section */
+    align-items: flex-start;           /* Align items to the top */
+    gap: 40px;
+    margin-bottom: 50px;           /* Add bottom margin to create spacing */
+    flex: 1;                       /* Allow the container to take up available space */
+    flex-wrap: wrap;                /* Allow content to wrap in smaller screens */
+  }
+  
+  .footer-image img {
+    width: 500px;  /* Ensure image fits within the container */
+    height: 400px;     /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image is properly scaled */
+    border-radius: 50%; /* Optional: Add rounded corners for a clean look */
+    margin-right: 200px;
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    gap: 40px; /* Increase the gap between sections */
+    flex: 1;    /* Allow the content to take up available space */
+    flex-wrap: wrap;  /* Allow content to wrap on smaller screens */
+    justify-content: space-between;  /* Distribute the sections evenly */
+    margin-right: 300px;
+  }
+  
+  .footer-section {
+    text-align: left; /* Align text to the left */
+    max-width: 300px; /* Limit the width of each section */
+    margin-bottom: 40px; /* Add margin to separate sections vertically */
+  }
+  
+  .footer-section h3 {
+    font-size: 35px;  /* Increased font size for section titles */
+    margin-bottom: 20px; /* Increased space below the heading */
+    color: white;        /* White color for headings */
+    font-weight: 600;    /* Bold font for section titles */
+  }
+  
+  .footer-section a {
+    display: block;         /* Make each link occupy a full line */
+    font-size:20px;      /* Increased font size for better readability */
+    color: #ccc;            /* Lighter gray for links */
+    text-decoration: none;  /* Remove underline */
+    margin-bottom: 15px;    /* Space between links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .footer-section a:hover {
+    color: white;           /* Links turn white on hover */
+    text-decoration: underline; /* Underline on hover for interaction */
+  }
+  
+  /* Social Media Icons */
+  .footer-social {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the social media icons */
+    gap: 35px;  /* Increase gap between icons */
+  }
+  
+  .footer-social a {
+    font-size: 2.5rem;      /* Larger icons for social media */
+    color: #ccc;            /* Default color for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .footer-social a:hover {
+    color: white;           /* Change color to white on hover */
+    transform: scale(1.1);   /* Slightly enlarge icons on hover */
+  }
+  
+  /* Footer Copyright */
+  footer p {
+    font-size: 1.3rem;       /* Regular font size for copyright text */
+    margin-top: 40px;        /* Space above the copyright */
+    color: #ccc;            /* Lighter gray for the copyright text */
+    font-weight: 400;        /* Regular weight */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;   /* Stack content vertically on smaller screens */
+      align-items: center;      /* Center content */
+      gap: 40px;                /* Increase gap between sections */
+    }
+  
+    .footer-content {
+      flex-direction: column;   /* Stack the sections vertically */
+      align-items: center;      /* Center the sections */
+      gap: 50px;                /* Increase gap between sections */
+    }
+  
+    .footer-section {
+      text-align: center; /* Center text for smaller screens */
+      max-width: 350px;    /* Allow a bit more width for each section */
+    }
+  
+    .footer-social {
+      margin-top: 40px;
+      gap: 30px; /* Larger gap for better spacing on smaller screens */
+    }
+  
+    footer p {
+      font-size: 1.1rem; /* Slightly smaller font size for copyright text */
+      margin-top: 40px; /* More space above the copyright text */
+    }
+  }
+  

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Get Started | Helperize</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="get.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://www.shutterstock.com/image-vector/closeup-right-hand-using-laptop-260nw-1806556813.jpg" alt="Helperize Logo" class="logo-image">
+        <div class="business-name">
+          <h1>Helperize</h1>
+        </div>
+      </div>
+  
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact</a></li>
+          <li><a href="get-started.html" class="btn-primary">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main class="get-started-content">
+    <section class="category-selection">
+        <h2>Choose a Service to Get Started</h2>
+        <p>Select the service you are interested in, and we’ll guide you through the next steps.</p>
+      
+     <!-- Category Selection -->
+<div class="categories">
+    <button class="category-button" onclick="showCategoryForm('writing')">Academic Writing</button>
+    <button class="category-button" onclick="showCategoryForm('project')">Project Management</button>
+    <button class="category-button" onclick="showCategoryForm('research')">Research Assistance</button>
+    <button class="category-button" onclick="showCategoryForm('editing')">Editing & Proofreading</button>
+    <button class="category-button" onclick="showCategoryForm('content')">Content Creation</button>
+    <button class="category-button" onclick="showCategoryForm('consulting')">Consulting Services</button>
+</div>
+
+      
+        <!-- Category Form (Initially hidden) -->
+        <div id="category-form" class="category-form">
+          <div id="category-description">
+            <p id="description-text">Please select a category above.</p>
+          </div>
+      
+          <form id="service-form" onsubmit="sendEmail(event)">
+            <h3>Fill out your details:</h3>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="details">Project Details:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+      
+            <button type="submit" class="btn-primary">Submit</button>
+          </form>
+        </div>
+    </section>
+  </main>
+
+  <!-- Font Awesome CDN for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- EmailJS CDN -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    // Initialize EmailJS
+    emailjs.init("YOUR_USER_ID");
+
+    function showCategoryForm(category) {
+      // Show the form
+      document.getElementById("category-form").style.display = "block";
+      document.getElementById("service-form").style.display = "block";
+
+      // Show category-specific description
+      const description = document.getElementById("description-text");
+      if (category === 'writing') {
+        description.innerHTML = "Select Academic Writing to get help with essays, assignments, reports, or dissertations.";
+      } else if (category === 'project') {
+        description.innerHTML = "Select Project Management if you need help organizing and managing your academic projects.";
+      } else if (category === 'research') {
+        description.innerHTML = "Select Research Assistance if you need help gathering data, writing papers, or conducting research.";
+      } else {
+        description.innerHTML = "If you have other needs, select this option and describe them in the form.";
+      }
+    }
+
+    function sendEmail(event) {
+      event.preventDefault();  // Prevent form submission
+
+      const form = document.getElementById("service-form");
+      const formData = new FormData(form);
+
+      // Prepare the email template data
+      const emailParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        project_details: formData.get('details'),
+      };
+
+      // Send email using EmailJS
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", emailParams)
+        .then((response) => {
+          console.log("Email sent successfully!", response);
+          alert("Your details have been sent successfully!");
+          form.reset();  // Reset form
+        })
+        .catch((error) => {
+          console.log("Failed to send email", error);
+          alert("There was an error sending your details. Please try again.");
+        });
+    }
+  </script>
+
+</body>
+</html>
